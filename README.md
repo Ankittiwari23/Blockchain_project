@@ -18,7 +18,7 @@ Many healthcare organizations and blockchain companies are working on building b
 <!-- TABLE OF CONTENTS -->
 ##Proposed Solution
 
-Required Software Tools
+## Required Software Tools
 1. Ethereum:
 Contribution: Ethereum serves as the underlying blockchain platform, providing the decentralized ledger where health records are stored securely and immutably. It ensures data integrity, transparency, and resilience against unauthorized access or tampering.
 Use Case: Ethereum is used to deploy and execute the HealthRecord smart contract, which manages the storage and retrieval of health records.
