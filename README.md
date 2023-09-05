@@ -6,17 +6,17 @@ Many healthcare organizations still depend on outdated systems to maintain patie
 ###
 2.complicated for the doctor.
 ###
-From the patient’s personal information to diagnostic reports and doctor’s prescriptions, healthcare organizations currently use the centralized database for saving data.
-###
-As the data is stored at a single centralized location, it leads to problems like: Identity thefts,spamming,financial data crimes
-###
-Due to data theft and spamming, the patient’s data can be misused for many reasons as they don’t control it.
-## Introduction 
-This project will implement blockchain technology for Electronic Health records  and also provide secure and scalable storage of electronic records by defining granular access rules for the users. 
+From the patient’s personal information to diagnostic reports and doctor’s prescriptions, healthcare organizations currently use the centralized database for saving data.As the data is stored at a single centralized location, it leads to problems like: Identity thefts,spamming,financial data crimes.In the healthcare sector, securing patient data is the most critical part. Tampering the patient records can create problems to identify the disease or problem in the patient by the doctors and hospitals. Between the years 2009 and 2017, around 176+ million patient records were breached. The hackers stole the credit card and bank information and used them in unethical ways. Blockchain is a tamper-proof, distributed, and incorruptible helps in accessing patient data in a much easier and more secure way. Due to data theft and spamming, the patient’s data can be misused for many reasons as they don’t control it.
+## Proposed Solution
+This project will implement blockchain technology for Electronic Health records  and also provide secure and scalable storage of electronic records by defining granular access rules for the users.
+
+## Smart Contracts in heatlh care
+Smart contracts are self-executing lines of code that run atop blockchains and are triggered once a set of predetermined conditions are met. They are used to automate the execution of online agreements without the involvement of third parties. Smart contracts can be used to create patient profiles on the blockchain while allowing doctors and relevant medical practitioners to view past medical records. This would allow them to come up with better treatment procedures based on a patient’s past treatment history and subsequent outcomes.Health centers can also configure smart contracts to track health complications arising from treatment side effects and encode them to share the information with partner drug manufacturing companies and medical associations that have yet to uncover the full side effects of new drugs.
+It is additionally possible to have smart contracts that send patient information to insurance companies for the purposes of patient compensation claims to smooth out such processes.
+
 ## Future Scope of the project
-Many healthcare organizations and blockchain companies are working on building blockchain-enabled systems to enhance healthcare services for both patients and healthcare professionals. This project can be extended to decentralize patient medical history, improving payment methods and tracking pharmaceuticals.
+Many healthcare organizations and blockchain companies are working on building blockchain-enabled systems to enhance healthcare services for both patients and healthcare professionals. This project can be extended to decentralize patient medical history, improving payment methods and tracking pharmaceuticals. Smart contracts can be used to create patient profiles on the blockchain while allowing doctors and relevant medical practitioners to view past medical records. This would allow them to come up with better treatment procedures based on a patient’s past treatment history and subsequent outcomes.
 <!-- TABLE OF CONTENTS -->
-##Proposed Solution
 
 ## Required Software Tools
 1. Ethereum:
