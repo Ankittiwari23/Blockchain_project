@@ -24,7 +24,7 @@ Securing patient data is paramount in the healthcare sector, as tampering with p
 ## Proposed Solution
 This project will implement blockchain technology and Smart contracts for Electronic Health records  and also provide secure and scalable storage of electronic records by defining granular access rules for the users.
 
-## Smart Contracts in heatlh care
+## Smart Contracts in health care
 Smart contracts are self-executing lines of code that run atop blockchains and are triggered once a set of predetermined conditions are met. They are used to automate the execution of online agreements without the involvement of third parties. Smart contracts can be used to create patient profiles on the blockchain while allowing doctors and relevant medical practitioners to view past medical records. This would allow them to come up with better treatment procedures based on a patient’s past treatment history and subsequent outcomes.Health centers can also configure smart contracts to track health complications arising from treatment side effects and encode them to share the information with partner drug manufacturing companies and medical associations that have yet to uncover the full side effects of new drugs.
 It is additionally possible to have smart contracts that send patient information to insurance companies for the purposes of patient compensation claims to smooth out such processes.
 
@@ -57,3 +57,4 @@ Contribution: Use to create the local etherum network
 
 Reference :
 1. https://www.hipaajournal.com/healthcare-data-breach-statistics/#:~:text=Between%202009%20and%202022%2C%205%2C150%20healthcare%20data%20breaches,than%201.2x%20the%20population%20of%20the%20United%20States.
+2. AYESHA SHAHNAZ ,USMAN QAMAR AND AYESHA KHALID :Using Blockchain for Electronic Health Records IEEE https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8863359
