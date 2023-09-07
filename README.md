@@ -38,3 +38,5 @@ Use Case: Truffle can be used to write, test, and deploy the HealthRecord smart 
 Contribution: Use to create the local etherum network
 ## Flowchart of the process
 ![blockchain_project_flowchart](https://github.com/Ankittiwari23/Blockchain_project/assets/84897935/ed4faedc-a486-4037-8316-8ccc58285e41)
+## Division of entire process
+![Blockchain work division](https://github.com/Ankittiwari23/Blockchain_project/assets/84897935/be283ad5-ea01-4212-b69c-46b35b6e9bcb)
