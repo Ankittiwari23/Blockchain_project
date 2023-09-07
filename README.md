@@ -1,12 +1,20 @@
 # Health Records Management Using Blockchain 
 ## Current Scenario 
-Many healthcare organizations still depend on outdated systems to maintain patient health records. Such outdated software keeps the patient medical data in local records that can make the diagnosis:
-###
-1.time-consuming.
-###
-2.complicated for the doctor.
-###
-From the patient’s personal information to diagnostic reports and doctor’s prescriptions, healthcare organizations currently use the centralized database for saving data.As the data is stored at a single centralized location, it leads to problems like: Identity thefts,spamming,financial data crimes.In the healthcare sector, securing patient data is the most critical part. Tampering the patient records can create problems to identify the disease or problem in the patient by the doctors and hospitals. Between the years 2009 and 2017, around 176+ million patient records were breached. The hackers stole the credit card and bank information and used them in unethical ways. Blockchain is a tamper-proof, distributed, and incorruptible helps in accessing patient data in a much easier and more secure way. Due to data theft and spamming, the patient’s data can be misused for many reasons as they don’t control it.
+In the healthcare industry, many organizations still rely on outdated systems to maintain patient health records. These antiquated software solutions store patient medical data in local records, which can result in several challenges:
+
+**Time-Consuming Diagnosis**: The use of outdated systems can make the diagnosis process time-consuming. Doctors often struggle to access and retrieve essential patient information efficiently.
+
+**Complexity for Healthcare Providers**: Outdated software systems can complicate the workflow for healthcare professionals. They may face difficulties in navigating and retrieving patient data, hindering their ability to provide timely and accurate care.
+
+Healthcare organizations currently rely on centralized databases to store a wide range of data, including personal information, diagnostic reports, and doctor's prescriptions. However, this centralized approach brings with it a set of significant problems, such as:
+
+**Identity Theft**: Centralized databases are vulnerable to breaches, potentially leading to identity theft. Unauthorized access to patient records can compromise sensitive personal information.
+
+**Spamming**: Patient data stored in a centralized location can become a target for spamming and unsolicited communications, potentially jeopardizing patient privacy.
+
+**Financial Data Crimes**: Centralized databases also pose a risk of financial data crimes. Hackers can exploit vulnerabilities to steal credit card and bank information, leading to unethical financial activities.
+
+Securing patient data is paramount in the healthcare sector, as tampering with patient records can have severe consequences for both patients and healthcare providers. Notably, between the years 2009 and 2017, over 176 million patient records were breached. Hackers exploited these breaches to gain access to sensitive financial data and misuse it for nefarious purposes.
 ## Proposed Solution
 This project will implement blockchain technology and Smart contracts for Electronic Health records  and also provide secure and scalable storage of electronic records by defining granular access rules for the users.
 
