@@ -50,11 +50,6 @@ Contribution: Truffle are development and deployment tools for Ethereum smart co
 Use Case: Truffle can be used to write, test, and deploy the HealthRecord smart contract to the Ethereum blockchain.
 6. Ganache
 Contribution: Use to create the local etherum network
-## Flowchart of the process
-![blockchain_project_flowchart](https://github.com/Ankittiwari23/Blockchain_project/assets/84897935/ed4faedc-a486-4037-8316-8ccc58285e41)
-## Division of entire process
-![Blockchain work division](https://github.com/Ankittiwari23/Blockchain_project/assets/84897935/be283ad5-ea01-4212-b69c-46b35b6e9bcb)
-
 ## Usecase of this project
 The implementation of a blockchain-based health records project offers numerous benefits and advantages that can significantly improve the healthcare industry. Here are some of the key reasons highlighting the usefulness of such a project:
 
@@ -83,7 +78,11 @@ The implementation of a blockchain-based health records project offers numerous 
 12. **Disaster Recovery**: Decentralized storage on a blockchain ensures redundancy, making data recovery in the event of natural disasters or system failures more robust and reliable.
 
 13. **Long-term Data Preservation**: Healthcare records stored on a blockchain are designed to last indefinitely. This ensures that patient data remains accessible and unaltered over extended periods.
-    
+## Flowchart of the process
+![blockchain_project_flowchart](https://github.com/Ankittiwari23/Blockchain_project/assets/84897935/ed4faedc-a486-4037-8316-8ccc58285e41)
+## Division of entire process
+![Blockchain work division](https://github.com/Ankittiwari23/Blockchain_project/assets/84897935/be283ad5-ea01-4212-b69c-46b35b6e9bcb)
+
 ## Reference :
 1. https://www.hipaajournal.com/healthcare-data-breach-statistics/#:~:text=Between%202009%20and%202022%2C%205%2C150%20healthcare%20data%20breaches,than%201.2x%20the%20population%20of%20the%20United%20States.
 2. AYESHA SHAHNAZ ,USMAN QAMAR AND AYESHA KHALID :Using Blockchain for Electronic Health Records IEEE https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8863359
