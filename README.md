@@ -36,5 +36,5 @@ Contribution: Truffle are development and deployment tools for Ethereum smart co
 Use Case: Truffle can be used to write, test, and deploy the HealthRecord smart contract to the Ethereum blockchain.
 6. Ganache
 Contribution: Use to create the local etherum network
-**Flowchart of the process
+## Flowchart of the process
 ![blockchain_project_flowchart](https://github.com/Ankittiwari23/Blockchain_project/assets/84897935/ed4faedc-a486-4037-8316-8ccc58285e41)
