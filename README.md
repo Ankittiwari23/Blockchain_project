@@ -80,6 +80,54 @@ The implementation of a blockchain-based health records project offers numerous 
 13. **Long-term Data Preservation**: Healthcare records stored on a blockchain are designed to last indefinitely. This ensures that patient data remains accessible and unaltered over extended periods.
 ## Flowchart of the process
 ![blockchain_project_flowchart](https://github.com/Ankittiwari23/Blockchain_project/assets/84897935/ed4faedc-a486-4037-8316-8ccc58285e41)
+
+1. **User Login:**
+   - The process begins when a user initiates a login operation. This may involve entering a username and password or using other authentication methods such as multi-factor authentication.
+
+2. **Interacts with React.js Frontend:**
+   - After successful authentication, the user interacts with the user interface built using React.js. This frontend application provides a dashboard and user-friendly interface for managing their Electronic Health Records (EHR).
+
+3. **Frontend Interacting with Smart Contract:**
+   - The React.js frontend communicates with the Ethereum blockchain via a specific smart contract designed for managing EHR. This interaction is made possible through the integration of Web3.js, a JavaScript library that allows the frontend to connect to the blockchain.
+
+4. **Smart Contract on Ethereum Processes Requests:**
+   - The core component of this system is the smart contract written in Solidity, a language for Ethereum smart contracts. This smart contract defines the rules and functions for handling health records. When the user interacts with the frontend to perform actions like retrieving or adding records, the frontend sends requests to the smart contract.
+
+   - The smart contract processes these requests by executing predefined functions and checks. For instance, it verifies the user's permissions and authorization to access or modify specific records.
+
+   - The smart contract ensures the security, privacy, and integrity of the health records. It may employ access control mechanisms to restrict data access to authorized parties, ensuring only healthcare professionals and the patient have the necessary access rights.
+
+5. **Data Stored Securely on Ethereum Blockchain:**
+   - The health records are stored on the Ethereum blockchain in a secure and immutable manner. Blockchain technology ensures that once data is recorded, it cannot be altered or deleted. This feature is crucial for maintaining the integrity of EHR data.
+
+   - Access to the health records on the blockchain is governed by the rules and permissions defined in the smart contract. Users can only access data that they are authorized to view or modify.
+
+6. **User Retrieves Health Records and Adds New Records:**
+   - Once the user is authenticated and authorized, they can perform various actions:
+     - **Retrieve Health Records:** Users can view their existing health records stored on the blockchain. These records can include information about medical treatments, diagnoses, prescriptions, and other relevant medical history.
+     - **Add New Records:** Users have the ability to add new records to their EHR. For example, they can update their medical history with recent diagnoses, treatments, or test results.
+
+   - These operations are executed through the smart contract, ensuring that data is stored and managed in a secure and standardized manner.
+
+7. **User Logs Out:**
+   - After completing their tasks, the user can log out from the application. This terminates their session and ensures that their EHR data remains secure.
+
+Throughout this process, various software tools play critical roles:
+
+- **Ethereum:** Provides the underlying blockchain platform for securely and immutably storing health records. It ensures data integrity, transparency, and protection against unauthorized access or tampering.
+
+- **Solidity:** The programming language used to code the smart contract. It defines data structures, functions, and access control logic within the smart contract, ensuring that health records are added, accessed, and secured according to predefined rules.
+
+- **React.js:** The user-friendly frontend interface for interacting with the blockchain and smart contract. It allows users to manage their health records seamlessly.
+
+- **Web3.js:** Facilitates the interaction between the React.js frontend and the Ethereum blockchain, enabling users to send transactions, query data, and monitor events on the blockchain.
+
+- **Truffle:** Provides development and deployment tools for Ethereum smart contracts, streamlining the smart contract development process.
+
+- **Ganache:** Creates a local Ethereum network for development and testing, allowing developers to test their smart contracts in a controlled environment.
+
+Developers working on this project are responsible for coding, deploying, and maintaining the smart contract, developing and maintaining the React.js frontend, and ensuring that all components work together securely and efficiently to provide a robust and user-friendly EHR system. They must also define and enforce granular access rules to protect the confidentiality and privacy of patient health records.
+
 ## Division of entire process
 ![Blockchain work division](https://github.com/Ankittiwari23/Blockchain_project/assets/84897935/be283ad5-ea01-4212-b69c-46b35b6e9bcb)
 
