@@ -208,7 +208,11 @@ contract All_In_One {
            
        }
   }
-    
+
+## Use Case Diagram  
+
+<img width="791" alt="Screenshot 2023-10-29 at 4 56 27 PM" src="https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/f473f043-8462-4e6a-99ec-ccde341204ea">
+
 
 ## Flowchart of the process
 ![blockchain_project_flowchart](https://github.com/Ankittiwari23/Blockchain_project/assets/84897935/ed4faedc-a486-4037-8316-8ccc58285e41)
