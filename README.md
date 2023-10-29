@@ -78,136 +78,6 @@ The implementation of a blockchain-based health records project offers numerous 
 12. **Disaster Recovery**: Decentralized storage on a blockchain ensures redundancy, making data recovery in the event of natural disasters or system failures more robust and reliable.
 
 13. **Long-term Data Preservation**: Healthcare records stored on a blockchain are designed to last indefinitely. This ensures that patient data remains accessible and unaltered over extended periods.
-## Code - Smart Contracts using solidity 
-contract All_In_One {
-    
-    // Paitent Structure here 
-    
-    struct paitent {           
-        bytes32 name;
-        bytes32 addres;
-        uint phoneNo;
-        bytes32 bloodGroup;
-        uint insuranceCompanyId;
-        uint emergencyContact;
-        bytes32 Precautions;
-        uint [] treatmentId;
-    }
-    
-    mapping (uint => uint ) entitie;
-    mapping (uint => paitent ) p_info;
-    mapping (address => uint) addresstoId;
-    mapping (uint => address) IdtoAdress;
-    mapping(address => uint)balancesOfMoney;
- 
-    
-    function addPatientInfo (uint _adharCardNumber, bytes32 _name, bytes32 _addres,uint _phoneNo ,bytes32 _bloodGroup , uint _insuranceCompany, uint _emergencyContact) public  {
-        require(entitie[_adharCardNumber]==0 && addresstoId[msg.sender]==0); 
-        p_info[_adharCardNumber].name = _name;
-        p_info[_adharCardNumber].addres = _addres;
-        p_info[_adharCardNumber].phoneNo = _phoneNo;
-        p_info[_adharCardNumber].bloodGroup = _bloodGroup;
-        p_info[_adharCardNumber].insuranceCompanyId = _insuranceCompany;
-        p_info[_adharCardNumber].emergencyContact = _emergencyContact;
-        entitie[_adharCardNumber] = 1; 
-        addresstoId[msg.sender] = _adharCardNumber;
-        IdtoAdress[_adharCardNumber] = msg.sender;
-    }
-    
-    function getPatientInfo(uint  _adharCardNumber) public view returns(bytes32 name , bytes32 addres,uint phoneNo ,bytes32 bloodGroup , uint insuranceCompany, uint emergencyContacts, bytes32 Precautions){
-        require(entitie[_adharCardNumber]==1 || entitie[_adharCardNumber]==2 );
-        return(p_info[_adharCardNumber].name, p_info[_adharCardNumber].addres, p_info[_adharCardNumber].phoneNo, p_info[_adharCardNumber].bloodGroup, p_info[_adharCardNumber].insuranceCompanyId, p_info[_adharCardNumber].emergencyContact,p_info[_adharCardNumber].Precautions);
-    }
-    
-    function UpdatePrecautions( uint _adharCardNumber,bytes32 _Precautions ) public {
-        require(entitie[_adharCardNumber]==1);
-        p_info[_adharCardNumber].Precautions = _Precautions;
-    } 
-
-       // Treatment Structure here 
-    struct treatment {
-        uint patient_id;
-        uint doctor_id;
-        bytes32 diagnosis;
-        bytes32 test_conducted;
-        uint bill;
-        bytes32 medicine;
-        bytes32 [] InsuranceKeep;
-    }
-    
-    mapping(uint=>treatment) tid;
-            
-    function createTreatmentID(uint patient_id) public returns (uint){
-        uint treatment_id = (142317*patient_id)%1000003;
-        return treatment_id;
-    }
-    
-    function TreatPatient(uint patient_id,uint doctor_id,bytes32 diagnosis,bytes32 test_conducted,uint bill,bytes32 medicine) public  returns (uint){
-        uint val = addresstoId[msg.sender];
-        require(entitie[patient_id]==1 || entitie[val]==2 );
-        uint _tid = createTreatmentID(patient_id);
-        tid[_tid].patient_id = patient_id;
-        tid[_tid].doctor_id = doctor_id;
-        tid[_tid].diagnosis = diagnosis;
-        tid[_tid].test_conducted = test_conducted;
-        tid[_tid].bill = bill;
-        tid[_tid].medicine = medicine;
-        p_info[patient_id].treatmentId.push(_tid); // pushing treatmentId to array in treatmentId.
-        return _tid;
-    }
-    
-    function getTreatmentDetails(uint _tid) public view returns (uint p_id,uint d_id,bytes32 diagnosis,bytes32 test_conducted,uint bill,bytes32 medicine) {
-        return (tid[_tid].patient_id,tid[_tid].doctor_id,tid[_tid].diagnosis,tid[_tid].test_conducted,tid[_tid].bill,tid[_tid].medicine);
-    }
-        
-    function addInsuranceKeep(uint p_id, bytes32  _medication) public {
-        uint val = addresstoId[msg.sender];
-        require(entitie[val]==2); 
-        uint _t_id = p_info[p_id].treatmentId[p_info[p_id].treatmentId.length-1];
-        tid[_t_id].InsuranceKeep.push(_medication);   
-    } 
-        //Doctor starts here
-    
-     struct doctor{
-        uint doc_id;
-        bytes32 name;
-        bytes32 practice_type;
-        bytes32 area_of_expertize;
-        uint phone_no;
-        bytes32 Address;
-    }
-    
-    mapping(uint=>doctor) did;
-    mapping(uint => uint) Otp;
-    
-    function addDoctor(uint doc_id,bytes32 name,bytes32 practice_type,bytes32 area_of_expertize,uint phone_no,bytes32 Address) public {
-        require(entitie[doc_id]==0 || addresstoId[msg.sender]==0); 
-        did[doc_id] = doctor(doc_id,name,practice_type,area_of_expertize,phone_no,Address);
-        entitie[doc_id]=2;
-        addresstoId[msg.sender] = doc_id;
-        IdtoAdress[doc_id] = msg.sender;
-    }
- 
-    function getDoctorDetails(uint _d_id) public constant returns (uint doc_id,bytes32 name,bytes32 practice_type,bytes32 area_of_expertize,uint phone_no,bytes32 Address){
-        uint val = addresstoId[msg.sender];
-        require(entitie[val]==2 || entitie[val]==1 ); 
-        return( did[_d_id].doc_id,did[_d_id].name,did[_d_id].practice_type,did[_d_id].area_of_expertize,did[_d_id].phone_no,did[_d_id].Address);
-    }
-
-    function requestAccessToPatient(uint _adharCardNumber) returns(uint){
-           uint val = addresstoId[msg.sender];
-           require(entitie[val]==2);
-           uint otp = uint(keccak256(now*_adharCardNumber));
-           Otp[_adharCardNumber] = otp;
-       }
-       
-       function getDetailsOfAllTID(uint _adharCardNumber, uint OTP) public returns(uint []){
-           uint val = addresstoId[msg.sender];
-           require(entitie[val]==2 && Otp[_adharCardNumber]==OTP);
-           return(p_info[_adharCardNumber].treatmentId);
-           
-       }
-  }
 
 ## Flowchart of the process
 ![blockchain_project_flowchart](https://github.com/Ankittiwari23/Blockchain_project/assets/84897935/ed4faedc-a486-4037-8316-8ccc58285e41)
@@ -244,42 +114,42 @@ contract All_In_One {
    - After completing their tasks, the user can log out from the application. This terminates their session and ensures that their EHR data remains secure.
 
 ## Algorithm for the process:
-1. Setting Up the Development Environment
-•	Install Node.js: Ensure that you have Node.js installed on your development machine as it's required for running various tools like Truffle and React.js.
-2. Setting Up Ganache
-•	Install Ganache: Set up a local Ethereum blockchain for development using Ganache.
-•	Start Ganache: Run Ganache to create a local Ethereum network with test accounts, private keys, and predefined Ether balances.
-3. Writing the Smart Contract (Solidity)
-•	Create a new Solidity file for the HealthRecord smart contract.
-•	Define the data structures and functions within the smart contract for managing health records, access control, and data integrity.
-•	Implement access control mechanisms to ensure only authorized users (patients and healthcare professionals) can access and modify records.
-•	Compile the smart contract using the Solidity compiler.
-4. Testing the Smart Contract (Truffle)
-•	Use Truffle's testing framework to write test cases for the smart contract functions.
-•	Run tests to ensure the smart contract behaves as expected.
-5. Deploying the Smart Contract (Truffle)
-•	Configure Truffle to connect to the Ganache blockchain.
-•	Deploy the HealthRecord smart contract to the local Ethereum network for testing purposes.
-6. Developing the React.js Frontend
+1. Setting Up the Development Environment<br>
+•	Install Node.js: Ensure that you have Node.js installed on your development machine as it's required for running various tools like Truffle and React.js.<br>
+2. Setting Up Ganache<br>
+•	Install Ganache: Set up a local Ethereum blockchain for development using Ganache.<br>
+•	Start Ganache: Run Ganache to create a local Ethereum network with test accounts, private keys, and predefined Ether balances.<br>
+3. Writing the Smart Contract (Solidity)<br>
+•	Create a new Solidity file for the HealthRecord smart contract.<br>
+•	Define the data structures and functions within the smart contract for managing health records, access control, and data integrity.<br>
+•	Implement access control mechanisms to ensure only authorized users (patients and healthcare professionals) can access and modify records.<br>
+•	Compile the smart contract using the Solidity compiler.<br>
+4. Testing the Smart Contract (Truffle)<br>
+•	Use Truffle's testing framework to write test cases for the smart contract functions.<br>
+•	Run tests to ensure the smart contract behaves as expected.<br>
+5. Deploying the Smart Contract (Truffle)<br>
+•	Configure Truffle to connect to the Ganache blockchain.<br>
+•	Deploy the HealthRecord smart contract to the local Ethereum network for testing purposes.<br>
+6. Developing the React.js Frontend<br>
 •	Create a new React.js project for the frontend.
 •	Build user-friendly interfaces for patients and healthcare professionals, including login and dashboard components.
 •	Integrate Web3.js into the frontend to enable interaction with the Ethereum blockchain and the deployed smart contract.
-8. User Authentication and Authorization
+8. User Authentication and Authorization<br>
 •	Implement user authentication mechanisms, allowing users to log in using their credentials or MFA.
-•	Ensure that only authorized users can access and manage health records.
-•	Verify user permissions and access rights within the frontend application.
-9. Retrieving and Adding Health Records
-•	Implement functionality for users to retrieve their existing health records from the blockchain.
-•	Allow users to add new records to their EHR, such as recent diagnoses, treatments, and test results.
-•	Ensure that these operations trigger transactions to the smart contract for recording and retrieval.
-10. Handling User Sessions
-•	Implement a session management system to allow users to log in and log out securely.
-•	Ensure that logging out terminates the user's session and prevents unauthorized access.
-11. Deployment
-•	Once the application is fully tested, deploy the React.js frontend on a web server.
-•	Ensure that the smart contract is deployed to the main Ethereum network, making it accessible to real users.
-12. Ongoing Maintenance
-•	Regularly update and maintain the smart contract and the frontend to address issues, enhance security, and add new features as needed.
+•	Ensure that only authorized users can access and manage health records.<br>
+•	Verify user permissions and access rights within the frontend application.<br>
+9. Retrieving and Adding Health Records<br>
+•	Implement functionality for users to retrieve their existing health records from the blockchain.<br>
+•	Allow users to add new records to their EHR, such as recent diagnoses, treatments, and test results.<br>
+•	Ensure that these operations trigger transactions to the smart contract for recording and retrieval.<br>
+10. Handling User Sessions<br>
+•	Implement a session management system to allow users to log in and log out securely.<br>
+•	Ensure that logging out terminates the user's session and prevents unauthorized access.<br>
+11. Deployment<br>
+•	Once the application is fully tested, deploy the React.js frontend on a web server.<br>
+•	Ensure that the smart contract is deployed to the main Ethereum network, making it accessible to real users.<br>
+12. Ongoing Maintenance<br>
+•	Regularly update and maintain the smart contract and the frontend to address issues, enhance security, and add new features as needed.<br>
 
 
 
