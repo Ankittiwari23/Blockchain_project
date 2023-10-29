@@ -264,21 +264,21 @@ contract All_In_One {
 •	Create a new React.js project for the frontend.
 •	Build user-friendly interfaces for patients and healthcare professionals, including login and dashboard components.
 •	Integrate Web3.js into the frontend to enable interaction with the Ethereum blockchain and the deployed smart contract.
-7. User Authentication and Authorization
+8. User Authentication and Authorization
 •	Implement user authentication mechanisms, allowing users to log in using their credentials or MFA.
 •	Ensure that only authorized users can access and manage health records.
 •	Verify user permissions and access rights within the frontend application.
-8. Retrieving and Adding Health Records
+9. Retrieving and Adding Health Records
 •	Implement functionality for users to retrieve their existing health records from the blockchain.
 •	Allow users to add new records to their EHR, such as recent diagnoses, treatments, and test results.
 •	Ensure that these operations trigger transactions to the smart contract for recording and retrieval.
-9. Handling User Sessions
+10. Handling User Sessions
 •	Implement a session management system to allow users to log in and log out securely.
 •	Ensure that logging out terminates the user's session and prevents unauthorized access.
-10. Deployment
+11. Deployment
 •	Once the application is fully tested, deploy the React.js frontend on a web server.
 •	Ensure that the smart contract is deployed to the main Ethereum network, making it accessible to real users.
-11. Ongoing Maintenance
+12. Ongoing Maintenance
 •	Regularly update and maintain the smart contract and the frontend to address issues, enhance security, and add new features as needed.
 
 
