@@ -209,11 +209,6 @@ contract All_In_One {
        }
   }
 
-## Use Case Diagram  
-
-<img width="791" alt="Screenshot 2023-10-29 at 4 56 27 PM" src="https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/f473f043-8462-4e6a-99ec-ccde341204ea">
-
-
 ## Flowchart of the process
 ![blockchain_project_flowchart](https://github.com/Ankittiwari23/Blockchain_project/assets/84897935/ed4faedc-a486-4037-8316-8ccc58285e41)
 
@@ -248,19 +243,45 @@ contract All_In_One {
 7. **User Logs Out:**
    - After completing their tasks, the user can log out from the application. This terminates their session and ensures that their EHR data remains secure.
 
-Throughout this process, various software tools play critical roles:
+## Algorithm for the process:
+1. Setting Up the Development Environment
+•	Install Node.js: Ensure that you have Node.js installed on your development machine as it's required for running various tools like Truffle and React.js.
+2. Setting Up Ganache
+•	Install Ganache: Set up a local Ethereum blockchain for development using Ganache.
+•	Start Ganache: Run Ganache to create a local Ethereum network with test accounts, private keys, and predefined Ether balances.
+3. Writing the Smart Contract (Solidity)
+•	Create a new Solidity file for the HealthRecord smart contract.
+•	Define the data structures and functions within the smart contract for managing health records, access control, and data integrity.
+•	Implement access control mechanisms to ensure only authorized users (patients and healthcare professionals) can access and modify records.
+•	Compile the smart contract using the Solidity compiler.
+4. Testing the Smart Contract (Truffle)
+•	Use Truffle's testing framework to write test cases for the smart contract functions.
+•	Run tests to ensure the smart contract behaves as expected.
+5. Deploying the Smart Contract (Truffle)
+•	Configure Truffle to connect to the Ganache blockchain.
+•	Deploy the HealthRecord smart contract to the local Ethereum network for testing purposes.
+6. Developing the React.js Frontend
+•	Create a new React.js project for the frontend.
+•	Build user-friendly interfaces for patients and healthcare professionals, including login and dashboard components.
+•	Integrate Web3.js into the frontend to enable interaction with the Ethereum blockchain and the deployed smart contract.
+7. User Authentication and Authorization
+•	Implement user authentication mechanisms, allowing users to log in using their credentials or MFA.
+•	Ensure that only authorized users can access and manage health records.
+•	Verify user permissions and access rights within the frontend application.
+8. Retrieving and Adding Health Records
+•	Implement functionality for users to retrieve their existing health records from the blockchain.
+•	Allow users to add new records to their EHR, such as recent diagnoses, treatments, and test results.
+•	Ensure that these operations trigger transactions to the smart contract for recording and retrieval.
+9. Handling User Sessions
+•	Implement a session management system to allow users to log in and log out securely.
+•	Ensure that logging out terminates the user's session and prevents unauthorized access.
+10. Deployment
+•	Once the application is fully tested, deploy the React.js frontend on a web server.
+•	Ensure that the smart contract is deployed to the main Ethereum network, making it accessible to real users.
+11. Ongoing Maintenance
+•	Regularly update and maintain the smart contract and the frontend to address issues, enhance security, and add new features as needed.
 
-- **Ethereum:** Provides the underlying blockchain platform for securely and immutably storing health records. It ensures data integrity, transparency, and protection against unauthorized access or tampering.
 
-- **Solidity:** The programming language used to code the smart contract. It defines data structures, functions, and access control logic within the smart contract, ensuring that health records are added, accessed, and secured according to predefined rules.
-
-- **React.js:** The user-friendly frontend interface for interacting with the blockchain and smart contract. It allows users to manage their health records seamlessly.
-
-- **Web3.js:** Facilitates the interaction between the React.js frontend and the Ethereum blockchain, enabling users to send transactions, query data, and monitor events on the blockchain.
-
-- **Truffle:** Provides development and deployment tools for Ethereum smart contracts, streamlining the smart contract development process.
-
-- **Ganache:** Creates a local Ethereum network for development and testing, allowing developers to test their smart contracts in a controlled environment.
 
 Developers working on this project are responsible for coding, deploying, and maintaining the smart contract, developing and maintaining the React.js frontend, and ensuring that all components work together securely and efficiently to provide a robust and user-friendly EHR system. They must also define and enforce granular access rules to protect the confidentiality and privacy of patient health records.
 
