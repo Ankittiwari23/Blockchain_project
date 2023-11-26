@@ -156,7 +156,68 @@ The implementation of a blockchain-based health records project offers numerous 
 Developers working on this project are responsible for coding, deploying, and maintaining the smart contract, developing and maintaining the React.js frontend, and ensuring that all components work together securely and efficiently to provide a robust and user-friendly EHR system. They must also define and enforce granular access rules to protect the confidentiality and privacy of patient health records.
 
 ## Division of entire process
-![Blockchain work division](https://github.com/Ankittiwari23/Blockchain_project/assets/84897935/be283ad5-ea01-4212-b69c-46b35b6e9bcb)
+![Blockchain work division](https://github.com/Ankittiwari23/Blockchain_project/assets/84897935/be283ad5-ea01-4212-b69c-46b35b6e9bcb) 
+
+## Workflow  
+**React Frontend:**
+1.	Launch the Application 
+2.	Check for MetaMask 
+3.	Connect to MetaMask 
+4.	Input Health Record Data 
+5.	Create Health Record 
+6.	Display Newly Created Health Record 
+7.	Update Medical History 
+8.	Update Medications 
+9.	Display Updated Health Record Information 
+Solidity Smart Contract: 
+1.	Define HealthRecord Struct 
+2.	Create Health Record Mapping 
+3.	Create Function for Creating Health Records 
+4.	Input Validation for Creation 
+5.	Update Medical History Function 
+6.	Update Medications Function 
+7.	Ownership Verification for Updates 
+8.	Emit HealthRecordUpdated Events for Updates 
+These step headings help break down the flow of the React frontend and the Solidity smart contract into distinct actions and interactions.  
+ 
+**Creating Meta Mask Account** 
+ 
+MetaMask is a popular Ethereum wallet and browser extension that allows users to manage their Ethereum accounts and interact with decentralized applications (DApps) on the Ethereum blockchain. It serves as a bridge between users and the Ethereum network, providing features like wallet management, transaction signing, and secure key storage. 
+ 
+ 
+To create a MetaMask account: 
+ 
+1.	Install MetaMask as a browser extension. 
+2.	Launch MetaMask and agree to terms. 
+3.	Create a new wallet with a strong password. 
+4.	Write down and securely store the 12-word seed phrase. 
+5.	Verify the seed phrase. 
+6.	You now have a MetaMask account. Keep the password and seed phrase safe. 
+ 
+    
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+Installing Ganache  
+ 
+Ganache is a widely used development tool for Ethereum and blockchain developers. It provides a personal and customizable Ethereum blockchain environment for local development and testing. It offers pre-funded accounts, event tracking, and control over gas costs, making it a safe and controlled environment for Ethereum developers to build and test smart contracts and applications before deploying them to the real Ethereum network. 
+ 
+ 
+  
+Account Creation in MetaMask   
+ 
+   
+ 
+  Copying private key of Ganache  
+  
+![image](https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/03729170-21f3-412f-acb5-b96de08b5ba3)
+
+
 
 ## Reference :
 1. https://www.hipaajournal.com/healthcare-data-breach-statistics/#:~:text=Between%202009%20and%202022%2C%205%2C150%20healthcare%20data%20breaches,than%201.2x%20the%20population%20of%20the%20United%20States.
