@@ -193,30 +193,184 @@ To create a MetaMask account:
 4.	Write down and securely store the 12-word seed phrase. 
 5.	Verify the seed phrase. 
 6.	You now have a MetaMask account. Keep the password and seed phrase safe. 
- 
-    
- 
- 
- 
- 
-   
- 
- 
- 
-Installing Ganache  
+<img width="452" alt="image" src="https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/bb35d8c0-c56c-479f-93bc-69908bd0bf6a">
+ <img width="452" alt="image" src="https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/75a04f62-0e6e-43b4-933a-afb7b669c3c8">
+
+**Installing Ganache**  
  
 Ganache is a widely used development tool for Ethereum and blockchain developers. It provides a personal and customizable Ethereum blockchain environment for local development and testing. It offers pre-funded accounts, event tracking, and control over gas costs, making it a safe and controlled environment for Ethereum developers to build and test smart contracts and applications before deploying them to the real Ethereum network. 
  
- 
-  
-Account Creation in MetaMask   
- 
-   
- 
-  Copying private key of Ganache  
-  
-![image](https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/03729170-21f3-412f-acb5-b96de08b5ba3)
+ <img width="452" alt="image" src="https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/6d2d1653-a0ee-4d06-8e19-dc6af8505f43">
 
+  
+**Account Creation in MetaMask**  
+
+<img width="452" alt="image" src="https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/c0a641cf-fba1-432b-bad1-1e24ab71c640">
+ 
+**Copying private key of Ganache**  
+<img width="180" alt="image" src="https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/549b327e-0723-42d9-b23a-ae8b8581cf30"> 
+
+## Code  
+
+## How Transaction is taking place 
+<img width="458" alt="image" src="https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/ab91e618-7197-47b9-aa02-ae12d81e94ae">
+<img width="458" alt="image" src="https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/88572c1a-0115-41b6-a26c-39d716a95427">
+
+**Connect to MetaMask:**
+User clicks "Connect to MetaMask" in the React.js application.
+MetaMask extension is opened, and the user connects their Ethereum wallet.
+
+**Load Web3 and Accounts:**
+The React.js application loads the Web3 library and enables the Ethereum provider in MetaMask. User accounts are retrieved.
+
+**Load Smart Contract:**
+The application connects to the deployed smart contract on the Ethereum blockchain using the contract's ABI and address.
+
+**Load Existing Appointments:**
+The application fetches existing appointments from the smart contract.
+
+**User Creates Appointment:**
+User enters admit date, discharge date, room number, and total price.
+The application converts dates, calculates the total price in Wei, and calls the smart contract method to create a new appointment.The transaction is sent to the Ethereum network.
+
+**Get Transaction Hash:**
+The application retrieves the transaction hash after sending the transaction.
+The hash uniquely identifies the transaction on the Ethereum blockchain.
+
+**Update UI - Transaction Pending:**
+The application updates the UI to inform the user that the transaction is pending confirmation.
+
+**User Reviews Transaction:**
+The user reviews the transaction details on MetaMask.
+MetaMask displays information like gas fees, total cost, and transaction hash.
+
+**User Confirms Transaction:**
+If the user confirms the transaction on MetaMask, it proceeds to confirmation. If rejected, the transaction is canceled. Gas fees are paid by the user at this stage.
+ 
+**Get Gas Price:**
+The application fetches the current gas price from the Ethereum network.
+
+**Transaction Confirmation:**
+The transaction is confirmed when included in a mined block.The application updates the UI to reflect the confirmed status. The smart contract executes the appointment creation.
+
+**Update UI - Appointment Created:**
+The application updates the UI to inform the user that the appointment was successfully created.
+
+**User Pays for Appointment:**
+User clicks "Pay" for the appointment.The application calls the smart contract method to mark the appointment as paid.The transaction is sent to the Ethereum network.
+
+**Get Transaction Hash (Payment):**
+The application retrieves the transaction hash for the payment transaction.
+
+**Update UI - Payment Pending:**
+The application updates the UI to inform the user that the payment transaction is pending confirmation.
+
+**User Reviews Payment Transaction:**
+Similar to the appointment creation, the user reviews the payment transaction on MetaMask.
+MetaMask displays information like gas fees, total cost, and transaction hash.
+
+**User Confirms Payment Transaction:**
+If the user confirms the payment transaction on MetaMask, it proceeds to confirmation. If rejected, the transaction is canceled. Gas fees are paid by the user at this stage.
+
+**Transaction Confirmation (Payment):**
+The payment transaction is confirmed when included in a mined block.The application updates the UI to reflect the confirmed payment status. The smart contract executes the payment.
+
+**Update UI - Payment Completed:**
+The application updates the UI to inform the user that the payment was successfully completed. 
+
+## OUTPUT 
+
+**Step 1: Inintalizing truffle and connecting to ganache and compiling contracts** 
+<img width="452" alt="image" src="https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/28a4ef0d-fd55-4687-a4be-48d03921c4fe">
+
+ 
+ 
+
+**Step 2: If metamask is not downloaded**
+<img width="452" alt="image" src="https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/c0830f88-7c62-479f-b9b2-fef65457e2c5">
+
+
+**Step 2 : Connecting to metamask**
+**Step 3: Connecting to metamask Wallet account**
+
+<img width="452" alt="image" src="https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/79270745-1a89-40da-a8b1-00af8838acba">
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Step 4: selecting account and confirm**
+ <img width="451" alt="image" src="https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/10330154-ad86-45a6-8b05-c642a9a6d98c">
+
+**Step 4: Filling the appointment details**
+**Step 5: On metamask confirming the transacxtion by verifying gas price and appointment price** 
+
+<img width="476" alt="image" src="https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/98b08cc8-457a-4a9a-90bb-7956b740e9a4">
+ 
+
+
+
+
+
+
+
+
+
+
+**Step 6: Clicking on confirm and the transaction is confirmed**
+
+<img width="484" alt="image" src="https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/20f96256-64e8-4e31-ab16-60fe3db7ebc8">
+
+ 
+**Result :**
+
+ <img width="223" alt="image" src="https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/6ab0252e-c1d5-446b-9c1a-e34e2b15d0f0">
+
+
+
+
+**Step 7: Opening Ganache**
+**Step 8 : Checking transaction details**
+<img width="452" alt="image" src="https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/d7a771cc-c4a2-46d9-817a-98a3cb162baa">
+
+
+**Step 9: Checking the block history of ganache network** 
+ <img width="452" alt="image" src="https://github.com/Ankittiwari23/Blockchain_project/assets/113471177/6562384a-bcca-405b-8a3e-2b48f77faaa8">
+
+
+## Final Result -  
+
+•	The contract is initialized and compiled. Transaction is done from one account to another account. 
+
+•	The application fetches the current gas price from the Ethereum network.
+
+•	The application retrieves the transaction hash for the payment transaction.
+
+•	The payment transaction is confirmed when included in a mined block.The application updates the UI to reflect the confirmed payment status. The smart contract executes the payment.
+
+•	The application updates the UI to inform the user that the payment was successfully completed. 
+
+
+
+## Future Scope 
+
+Many healthcare organizations and blockchain companies are working on building blockchain-enabled systems to enhance healthcare services for both patients and healthcare professionals. This project can be extended to decentralize patient medical history, improving payment methods and tracking pharmaceuticals. Smart contracts can be used to create patient profiles on the blockchain while allowing doctors and relevant medical practitioners to view past medical records. This would allow them to come up with better treatment procedures based on a patient’s past treatment history and subsequent outcomes.
+
+## Conclusion 
+
+Thus a new way of storing the health record securely is done using Ethereum blockchain and Smart Contracts using solidity which will protect the health information of the users and save it from data breach. It also provide secure and scalable storage of electronic records by defining granular access rules for the users. The project promotes a patient-centric approach by empowering users to have transparent and direct access to their health records. Decentralization minimizes the risks associated with centralized data storage. There is no single point of control, reducing vulnerabilities to hacking, data breaches, or system failures. the described project showcases a robust and forward-thinking solution for Electronic Health Record management, addressing critical aspects such as security, privacy, scalability, and user accessibility.
 
 
 ## Reference :
